@@ -21,7 +21,7 @@ For example, make a user to run the CLI as a service. Then, in that user's home 
 May also provide the config via command line args:
 
 ```
-file-provider --FILE-PROVIDER_PORT=12345 --FILE-PROVIDER_FILEPATH=/a/diff/file
+file-provider --FILE-PROVIDER_PORT=12345 --FILE-PROVIDER_filePath=/a/diff/file
 ```
 
 
