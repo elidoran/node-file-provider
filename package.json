@@ -1,0 +1,28 @@
+{
+  "name": "file-provider",
+  "version": "0.1.0",
+  "description": "Cli usable as service to provide a file to clients",
+  "main": "lib",
+  "bin": "bin/file-provider.js",
+  "author": "Eli Doran <eli+npm@elidoran.com>",
+  "license": "MIT",
+  "scripts": {
+    "compile": "coffee --bare --compile lib bin",
+    "clean": "rm -rf lib/*.js bin/command.js",
+    "prepublish": "npm run compile",
+    "postpublish": "npm run clean",
+    "test": "mocha --compilers coffee:coffee-script/register --reporter spec --bail --check-leaks test/lib test/bin"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/elidoran/node-file-provider.git"
+  },
+  "bugs": "http://github.com/elidoran/node-file-provider/issues",
+  "devDependencies": {
+    "coffee-script": "^1.11.1",
+    "mocha": "^2.5.3"
+  },
+  "dependencies": {
+    "nuc": "^0.2.2"
+  }
+}
